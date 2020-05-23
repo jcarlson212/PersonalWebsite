@@ -1,54 +1,75 @@
+.classic {
+  background-color: #fdfdfd;
+}
+
+.dataTable {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.dataTable {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 #links {
-    background-color: rgb(19, 56, 124);
-    display: flex;
-    flex-direction: row;
+  background-color: #13387c;
+  display: flex;
+  flex-direction: row;
 }
-
 
 .pageLink {
-    background-color: rgb(83, 110, 170);
+  background-color: #536eaa;
+  margin: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
+  width: 25%;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  #links {
+    background-color: #13387c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pageLink {
+    background-color: #536eaa;
     margin: 20px 20px 20px 20px;
     padding: 20px 20px 20px 20px;
-    width: 25%;
+    width: 80%;
     text-align: center;
+  }
 }
-
-@media (max-width: 800px) {
-    #links {
-        background-color: rgb(19, 56, 124);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .pageLink {
-        background-color: rgb(83, 110, 170);
-        margin: 20px 20px 20px 20px;
-        padding: 20px 20px 20px 20px;
-        width: 66%;
-        text-align: center;
-    }
-}
-
-.pageLink > a {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+.pageLink a {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .mainHeader {
-    color: rgb(19, 56, 124);
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-
-body {
-    background-color: rgb(155, 168, 189);
+  color: #13387c;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
 #aboutMe {
-    background-color: rgb(83, 110, 170);
-    margin: 20px 20px 20px 20px;
-    padding: 20px 20px 20px 20px;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+  background-color: #536eaa;
+  margin: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+.flash-card {
+  background-color: #536eaa;
+  color: white;
+  align-self: center;
+  text-align: center;
+  width: 100%;
+  height: 200px;
+  margin: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
+}
+
+/*# sourceMappingURL=mystyle.css.map */
