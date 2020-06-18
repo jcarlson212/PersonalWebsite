@@ -1,4 +1,4 @@
-# Project 0
+# Project 0 (Harvard CS50 Web)
 
 Web Programming with Python and JavaScript
 
