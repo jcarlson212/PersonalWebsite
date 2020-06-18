@@ -1,6 +1,12 @@
 $background_color_main: rgb(19, 56, 124);
 $component_background_color: rgb(83, 110, 170);
 
+p {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+  
+
 .classic { 
     background-color: rgb(253, 253, 253);
 }
@@ -20,6 +26,7 @@ $component_background_color: rgb(83, 110, 170);
     background-color: $background_color_main;
     display: flex;
     flex-direction: row;
+    margin-bottom: 20px;
 }
 
 
@@ -37,6 +44,7 @@ $component_background_color: rgb(83, 110, 170);
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 20px;
     }
     .pageLink {
         background-color: $component_background_color;
@@ -67,6 +75,8 @@ $component_background_color: rgb(83, 110, 170);
     padding: 20px 20px 20px 20px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    align-self: center;
+    text-align: center;
 }
 
 .flash-card {
@@ -78,4 +88,22 @@ $component_background_color: rgb(83, 110, 170);
     height: 200px;
     margin: 20px 20px 20px 20px;
     padding: 20px 20px 20px 20px;
+}
+
+.dataTable2 {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 40px;
+}
+
+ol {
+    margin-left: 40%;
+    margin-right: 40%;
 }

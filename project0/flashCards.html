@@ -4,6 +4,19 @@
         <title>Flash Cards</title>
         <link rel="stylesheet" type="text/css" href="mystyle.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script>
+            for(let i = 1; i <= 9; ++i){
+                let id = 'flash' + String(i);
+                console.log(id)
+                let el = document.getElementById(id);
+                console.log(el);
+                clickerFn = function() {
+                    console.log('Click just happened');
+                    return true;
+                }
+                el.addEventListener("click", clickerFn);
+            }
+        </script>
     </head>
     <body class="classic">
         <h1 class="mainHeader">Flash cards</h1>
@@ -18,37 +31,37 @@
 
             <div class="row">
                 <div class = "col-lg">
-                    <div class="flash-card">1</div>
+                    <div class="flash-card" id="flash1">1</div>
                 </div>
                 <div class = "col-sm">
-                    <div class="flash-card">2</div>
+                    <div class="flash-card" id="flash2">2</div>
                 </div>
                 <div class = "col-sm">
-                    <div class="flash-card">3</div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class = "col-sm">
-                    <div class="flash-card">3</div>
-                </div>
-                <div class = "col-sm">
-                    <div class="flash-card">3</div>
-                </div>
-                <div class = "col-sm">
-                    <div class="flash-card">3</div>
+                    <div class="flash-card" id="flash3">3</div>
                 </div>
             </div>
 
             <div class="row">
                 <div class = "col-sm">
-                    <div class="flash-card">3</div>
+                    <div class="flash-card" id="flash4">3</div>
                 </div>
                 <div class = "col-sm">
-                    <div class="flash-card">3</div>
+                    <div class="flash-card" id="flash5">3</div>
                 </div>
                 <div class = "col-sm">
-                    <div class="flash-card">3</div>
+                    <div class="flash-card" id="flash6">3</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class = "col-sm">
+                    <div class="flash-card" id="flash7">3</div>
+                </div>
+                <div class = "col-sm">
+                    <div class="flash-card" id="flash8">3</div>
+                </div>
+                <div class = "col-sm">
+                    <div class="flash-card" id="flash9">3</div>
                 </div>
             </div>
           
