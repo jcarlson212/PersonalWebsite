@@ -8,8 +8,11 @@
             let flash_cards = {
                 ["0"]: {
                     isFlipped: false,
-                    frontText: "I am the front",
-                    backText: "I am the back",
+                    frontText: "Topological Space",
+                    backText: `A topological space is a set X pair with a collection of subsets of X, T, (by pair I mean (X, T)) s.t. X is an element of T,
+                    the empty set is an element of T, elements of T are closed with respect to T under arbitrary unions (uncountable unions / countable unions), 
+                    and alements of T are closed with respect to T under finite intersections.
+                    `,
                 },
                 ["1"]: {
                     isFlipped: false,
@@ -57,17 +60,25 @@
                     const id = "flash" + String(i);
                     let el = document.getElementById(id);
                     const idNum = parseInt(el.id.substr(5, el.id.length - 5)) - 1;
-                    el.innerHTML = flash_cards[String(idNum)].frontText;
-                    
+                    let newText = document.createElement("p");
+                    newText.innerHTML = flash_cards[String(idNum)].frontText;
+                    el.appendChild(newText);
                     clickerFn = function() {
                         console.log('Click just happened');
                         const idNum = parseInt(this.id.substr(5, this.id.length - 5)) - 1;
                         flash_cards[String(idNum)].isFlipped = !flash_cards[String(idNum)].isFlipped;
-                        
                         if(flash_cards[String(idNum)].isFlipped) {
-                            this.innerHTML = flash_cards[String(idNum)].backText;
+                            let newText = document.createElement("p");
+                            newText.className = "flashCardBack";
+                            newText.innerHTML = flash_cards[String(idNum)].backText;
+                            this.innerHTML = ""
+                            this.appendChild(newText)
                         }else{
                             this.innerHTML = flash_cards[String(idNum)].frontText;
+                            let newText = document.createElement("p");
+                            newText.innerHTML = flash_cards[String(idNum)].frontText;
+                            this.innerHTML = ""
+                            this.appendChild(newText);
                         }
                     }
                     el.addEventListener("click", clickerFn);
@@ -89,37 +100,37 @@
 
             <div class="row">
                 <div class = "col-lg">
-                    <div class="flash-card" id="flash1">1</div>
+                    <div class="flash-card" id="flash1"></div>
                 </div>
                 <div class = "col-sm">
-                    <div class="flash-card" id="flash2">2</div>
+                    <div class="flash-card" id="flash2"></div>
                 </div>
                 <div class = "col-sm">
-                    <div class="flash-card" id="flash3">3</div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class = "col-sm">
-                    <div class="flash-card" id="flash4">4</div>
-                </div>
-                <div class = "col-sm">
-                    <div class="flash-card" id="flash5">5</div>
-                </div>
-                <div class = "col-sm">
-                    <div class="flash-card" id="flash6">6</div>
+                    <div class="flash-card" id="flash3"></div>
                 </div>
             </div>
 
             <div class="row">
                 <div class = "col-sm">
-                    <div class="flash-card" id="flash7">7</div>
+                    <div class="flash-card" id="flash4"></div>
                 </div>
                 <div class = "col-sm">
-                    <div class="flash-card" id="flash8">8</div>
+                    <div class="flash-card" id="flash5"></div>
                 </div>
                 <div class = "col-sm">
-                    <div class="flash-card" id="flash9">9</div>
+                    <div class="flash-card" id="flash6"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class = "col-sm">
+                    <div class="flash-card" id="flash7"></div>
+                </div>
+                <div class = "col-sm">
+                    <div class="flash-card" id="flash8"></div>
+                </div>
+                <div class = "col-sm">
+                    <div class="flash-card" id="flash9"></div>
                 </div>
             </div>
           

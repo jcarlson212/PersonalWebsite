@@ -1,14 +1,15 @@
+p {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
 .classic {
   background-color: #fdfdfd;
 }
 
-.dataTable2 {
-  border-collapse: collapse;
+.dataTable {
   border: 1px solid black;
-  width: 20%;
-  margin-left: 40%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding: 10px;
 }
 
 .dataTable {
@@ -69,7 +70,7 @@
   text-align: center;
 }
 
-.flash-card {
+.flash-card, .flashCardBack {
   background-color: #536eaa;
   color: white;
   align-self: center;
@@ -80,9 +81,24 @@
   padding: 20px 20px 20px 20px;
 }
 
-p {
-  margin-left: 15%;
-  margin-right: 15%;
+.dataTable2 {
+  border-collapse: collapse;
+  border: 1px solid black;
+  width: 20%;
+  margin-left: 40%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.flashCardBack {
+  overflow: auto;
+  margin: 0px;
+  padding: 0px;
+  height: 150px;
 }
 
 h2 {
