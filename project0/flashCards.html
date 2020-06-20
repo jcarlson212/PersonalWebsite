@@ -5,17 +5,75 @@
         <link rel="stylesheet" type="text/css" href="mystyle.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script>
-            for(let i = 1; i <= 9; ++i){
-                let id = 'flash' + String(i);
-                console.log(id)
-                let el = document.getElementById(id);
-                console.log(el);
-                clickerFn = function() {
-                    console.log('Click just happened');
-                    return true;
-                }
-                el.addEventListener("click", clickerFn);
+            let flash_cards = {
+                ["0"]: {
+                    isFlipped: false,
+                    frontText: "I am the front",
+                    backText: "I am the back",
+                },
+                ["1"]: {
+                    isFlipped: false,
+                    frontText: "I am the front",
+                    backText: "I am the back",
+                },
+                ["2"]: {
+                    isFlipped: false,
+                    frontText: "I am the front",
+                    backText: "I am the back",
+                },
+                ["3"]: {
+                    isFlipped: false,
+                    frontText: "I am the front",
+                    backText: "I am the back",
+                },
+                ["4"]: {
+                    isFlipped: false,
+                    frontText: "I am the front",
+                    backText: "I am the back",
+                },
+                ["5"]: {
+                    isFlipped: false,
+                    frontText: "I am the front",
+                    backText: "I am the back",
+                },
+                ["6"]: {
+                    isFlipped: false,
+                    frontText: "I am the front",
+                    backText: "I am the back",
+                },
+                ["7"]: {
+                    isFlipped: false,
+                    frontText: "I am the front",
+                    backText: "I am the back",
+                },
+                ["8"]: {
+                    isFlipped: false,
+                    frontText: "I am the front",
+                    backText: "I am the back",
+                },
             }
+            document.addEventListener("DOMContentLoaded", function (){
+                for(let i = 1; i <= 9; ++i){
+                    const id = "flash" + String(i);
+                    let el = document.getElementById(id);
+                    const idNum = parseInt(el.id.substr(5, el.id.length - 5)) - 1;
+                    el.innerHTML = flash_cards[String(idNum)].frontText;
+                    
+                    clickerFn = function() {
+                        console.log('Click just happened');
+                        const idNum = parseInt(this.id.substr(5, this.id.length - 5)) - 1;
+                        flash_cards[String(idNum)].isFlipped = !flash_cards[String(idNum)].isFlipped;
+                        
+                        if(flash_cards[String(idNum)].isFlipped) {
+                            this.innerHTML = flash_cards[String(idNum)].backText;
+                        }else{
+                            this.innerHTML = flash_cards[String(idNum)].frontText;
+                        }
+                    }
+                    el.addEventListener("click", clickerFn);
+                }
+            });
+            
         </script>
     </head>
     <body class="classic">
@@ -43,25 +101,25 @@
 
             <div class="row">
                 <div class = "col-sm">
-                    <div class="flash-card" id="flash4">3</div>
+                    <div class="flash-card" id="flash4">4</div>
                 </div>
                 <div class = "col-sm">
-                    <div class="flash-card" id="flash5">3</div>
+                    <div class="flash-card" id="flash5">5</div>
                 </div>
                 <div class = "col-sm">
-                    <div class="flash-card" id="flash6">3</div>
+                    <div class="flash-card" id="flash6">6</div>
                 </div>
             </div>
 
             <div class="row">
                 <div class = "col-sm">
-                    <div class="flash-card" id="flash7">3</div>
+                    <div class="flash-card" id="flash7">7</div>
                 </div>
                 <div class = "col-sm">
-                    <div class="flash-card" id="flash8">3</div>
+                    <div class="flash-card" id="flash8">8</div>
                 </div>
                 <div class = "col-sm">
-                    <div class="flash-card" id="flash9">3</div>
+                    <div class="flash-card" id="flash9">9</div>
                 </div>
             </div>
           
