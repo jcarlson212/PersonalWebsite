@@ -16,43 +16,50 @@
                 },
                 ["1"]: {
                     isFlipped: false,
-                    frontText: "I am the front",
-                    backText: "I am the back",
+                    frontText: "Open Set",
+                    backText: `A set U is open in a topological space (X, T) if U is an element of T. If we are in a metric space with the metric topology,
+                    a set U is open iff for any x in U, there exists r > 0 s.t. B_{r}(x) \\subset{U} 
+                    `,
                 },
                 ["2"]: {
                     isFlipped: false,
-                    frontText: "I am the front",
-                    backText: "I am the back",
+                    frontText: "Closed Set",
+                    backText: "A set U is closed in a topological space (X,T) iff X \\ U is open",
                 },
                 ["3"]: {
                     isFlipped: false,
-                    frontText: "I am the front",
-                    backText: "I am the back",
+                    frontText: "Limit Point of a Set S In a Topological Space (X,T)",
+                    backText: "A point x in S is a limit point of S iff every neighborhood of x contains a point in S other than x",
                 },
                 ["4"]: {
                     isFlipped: false,
-                    frontText: "I am the front",
-                    backText: "I am the back",
+                    frontText: "Compact Set",
+                    backText: `A set is compact (in a topological space) iff every open cover has a finite subcover. Equivalently, every net has 
+                        a convergent subnet
+                    `,
                 },
                 ["5"]: {
                     isFlipped: false,
-                    frontText: "I am the front",
-                    backText: "I am the back",
+                    frontText: "Sequentially Compact",
+                    backText: "A set is sequentially compact iff every sequence has a convergent subsequence",
                 },
                 ["6"]: {
                     isFlipped: false,
-                    frontText: "I am the front",
-                    backText: "I am the back",
+                    frontText: "Example of a space that is compact but not sequentially compact",
+                    backText: `Take an uncountable cartesian product of [0,1]. This is compact by Tychonoff's theorem. Take the sequence that is
+                    1 at the first ordinal (and 0 elsewhere), then the second, and so on. It has no convergent subsequence. This can also be done
+                    with the same reasoning for a countably-infinite cartesian product of course.
+                    `,
                 },
                 ["7"]: {
                     isFlipped: false,
-                    frontText: "I am the front",
-                    backText: "I am the back",
+                    frontText: "Define the Lp Spaces",
+                    backText: "Lp = { f | f:X -> C is measurable and integral(|f|) < infinity }",
                 },
                 ["8"]: {
                     isFlipped: false,
-                    frontText: "I am the front",
-                    backText: "I am the back",
+                    frontText: "Dominated Convergence Theorem (2.24 in Folland)",
+                    backText: "Suppose f_n -> f pointwise for f_n measurable and |f_n| <= g for g integrable. then f is integrable and \\integral(f_n) -> \\integral(f)",
                 },
             }
             document.addEventListener("DOMContentLoaded", function (){
