@@ -5,6 +5,9 @@
         <link rel="stylesheet" type="text/css" href="mystyle.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script>
+
+            const NUMBER_OF_CARDS = 9;
+            //Here is a dictionary from flash card index / number to the frontText and backText. It also uses a state variable isFlipped.
             let flash_cards = {
                 ["0"]: {
                     isFlipped: false,
@@ -62,8 +65,10 @@
                     backText: "Suppose f_n -> f pointwise for f_n measurable and |f_n| <= g for g integrable. then f is integrable and \\integral(f_n) -> \\integral(f)",
                 },
             }
+            //This function initializes the text of all of the flash cards (to the front of them), and then adds a listener to each flash card
+            //that listens for a click on that particular flash card. In response, the card will display the needed text, and the state information will be updated
             document.addEventListener("DOMContentLoaded", function (){
-                for(let i = 1; i <= 9; ++i){
+                for(let i = 1; i <= NUMBER_OF_CARDS; ++i){
                     const id = "flash" + String(i);
                     let el = document.getElementById(id);
                     const idNum = parseInt(el.id.substr(5, el.id.length - 5)) - 1;
@@ -71,7 +76,6 @@
                     newText.innerHTML = flash_cards[String(idNum)].frontText;
                     el.appendChild(newText);
                     clickerFn = function() {
-                        console.log('Click just happened');
                         const idNum = parseInt(this.id.substr(5, this.id.length - 5)) - 1;
                         flash_cards[String(idNum)].isFlipped = !flash_cards[String(idNum)].isFlipped;
                         if(flash_cards[String(idNum)].isFlipped) {
@@ -104,9 +108,8 @@
         </div>
 
         <div class="container">
-
             <div class="row">
-                <div class = "col-lg">
+                <div class = "col-sm">
                     <div class="flash-card" id="flash1"></div>
                 </div>
                 <div class = "col-sm">
@@ -140,8 +143,6 @@
                     <div class="flash-card" id="flash9"></div>
                 </div>
             </div>
-          
-
         </div>
     </body>
 </html>

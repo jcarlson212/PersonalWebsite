@@ -13,142 +13,145 @@
             <div class="pageLink"><a href="resume.html">My resume</a></div>
             <div class="pageLink"><a href="projects.html">Projects</a></div>
         </div>
+        
+        <div id="blogPost1">
+            <h2>A simple analysis of what makes certain countries have a higher GDP Per Capita</h2>
+            <p>Poverty is a issue that permeates a lot of the discussions today that revolve around equity. In this post, we 
+                explore what might cause some of this inequity by focusing on finding certain causes of higher GDP per capita that will be used 
+                in future blog posts for more serious mathematical analysis.
+            </p>
+            <p>
+                First, notice that all of the countries in the top 5 of GDP per capita in 2017 (data obtained from The World Bank at 
+                https://data.worldbank.org/indicator/NY.GDP.PCAP.CD) are situated in / owned by countries traditionally regarded as wealthy
+                - China (Macao), Great Brittain (Carman Islands, Isle of Man), France (Monaco), and Luxembourg. 
+            </p>  
+            <table class="dataTable2">
+                <tr><th>Rank</th>
+                    <th>Country Name</th>
+                    <th>GDP Per Capita(2017)</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Monaco</td>
+                    <td>167101.759</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Luxembourg</td>
+                    <td>107361.307</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Macao SAR, China</td>
+                    <td>81516.6749</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Cayman Islands</td>
+                    <td>81124.5135</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Isle of Man</td>
+                    <td>80989.1722</td>
+                </tr>
+            </table>
+            
 
-        <h2>A simple analysis of what makes certain countries have a higher GDP Per Capita</h2>
-        <p>Poverty is a issue that permeates a lot of the discussions today that revolve around equity. In this post, we 
-            explore what might cause some of this inequity by focusing on finding certain causes of higher GDP per capita that will be used 
-            in future blog posts for more serious mathematical analysis.
-        </p>
-        <p>
-            First, notice that all of the countries in the top 5 of GDP per capita in 2017 (data obtained from The World Bank at 
-            https://data.worldbank.org/indicator/NY.GDP.PCAP.CD) are situated in / owned by countries traditionally regarded as wealthy
-            - China (Macao), Great Brittain (Carman Islands, Isle of Man), France (Monaco), and Luxembourg. 
-        </p>  
-        <table class="dataTable2">
-            <tr><th>Rank</th>
-                <th>Country Name</th>
-                <th>GDP Per Capita(2017)</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Monaco</td>
-                <td>167101.759</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Luxembourg</td>
-                <td>107361.307</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Macao SAR, China</td>
-                <td>81516.6749</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Cayman Islands</td>
-                <td>81124.5135</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Isle of Man</td>
-                <td>80989.1722</td>
-            </tr>
-        </table>
+            <p>The following are the PPP adjusted (if possible for some) graphs of their GDP per capita (https://tradingeconomics.com/luxembourg/gdp-per-capita-ppp)</p>
+
+            <div class="media m-5">
+                <img src="monaco-gdp-per-capita.png" class="mr-3">
+                <div class="media-body">
+                    <h5 class="mt-0">Monaco</h5>
+                    The GDP per capita for Monaco.
+                </div>
+            </div>
+            <div class="media m-5"">
+                <img src="luxembourg-gdp-per-capita-ppp.png" class="mr-3">
+                <div class="media-body">
+                    <h5 class="mt-0">Luxembourg</h5>
+                    The GDP per capita (PPP adjusted) for Luxembourg.
+                </div>
+            </div>
+            <div class="media m-5"">
+                <img src="macau-gdp-per-capita-ppp.png" class="mr-3">
+                <div class="media-body">
+                    <h5 class="mt-0">Macau</h5>
+                    The GDP per capita (PPP adjusted) for Macau.
+                </div>
+            </div>
+            <div class="media m-5"">
+                <img src="cayman-islands-gdp-per-capita-ppp-current-international-$-wb-data-.png" class="mr-3">
+                <div class="media-body">
+                    <h5 class="mt-0">Cayman Islands</h5>
+                    The GDP per capita (PPP adjusted) for the Cayman Islands.
+                </div>
+            </div>
+            <div class="media m-5"">
+                <img src="isle-of-man-gdp-per-capita.png" class="mr-3">
+                <div class="media-body">
+                    <h5 class="mt-0">Isle of Man</h5>
+                    The GDP per capita for Isle of Man.
+                </div>
+            </div>
+
         
 
-        <p>The following are the PPP adjusted (if possible for some) graphs of their GDP per capita (https://tradingeconomics.com/luxembourg/gdp-per-capita-ppp)</p>
+            <p>(Note that Isle of Man and Luxembourg are not PPP adjusted)
+                Since these countries clearly don't have data that goes back too far (mid 20th century), we will
+                look at the GDP per capita of China, Great Brittain, and France:
+            </p>
 
-        <div class="media m-5">
-            <img src="monaco-gdp-per-capita.png" class="mr-3">
-            <div class="media-body">
-                <h5 class="mt-0">Monaco</h5>
-                The GDP per capita for Monaco.
+            <div class="media m-5"">
+                <img src="france-gdp-per-capita.png" class="mr-3">
+                <div class="media-body">
+                    <h5 class="mt-0">France</h5>
+                    The GDP per capita for France.
+                </div>
             </div>
-        </div>
-        <div class="media m-5"">
-            <img src="luxembourg-gdp-per-capita-ppp.png" class="mr-3">
-            <div class="media-body">
-                <h5 class="mt-0">Luxembourg</h5>
-                The GDP per capita (PPP adjusted) for Luxembourg.
+            <div class="media m-5"">
+                <img src="united-kingdom-gdp-per-capita.png" class="mr-3">
+                <div class="media-body">
+                    <h5 class="mt-0">United Kingdom</h5>
+                    The GDP per capita for the United Kingdom.
+                </div>
             </div>
-        </div>
-        <div class="media m-5"">
-            <img src="macau-gdp-per-capita-ppp.png" class="mr-3">
-            <div class="media-body">
-                <h5 class="mt-0">Macau</h5>
-                The GDP per capita (PPP adjusted) for Macau.
+            <div class="media m-5"">
+                <img src="china-gdp-per-capita.png" class="mr-3">
+                <div class="media-body">
+                    <h5 class="mt-0">China</h5>
+                    The GDP per capita for China.
+                </div>
             </div>
-        </div>
-        <div class="media m-5"">
-            <img src="cayman-islands-gdp-per-capita-ppp-current-international-$-wb-data-.png" class="mr-3">
-            <div class="media-body">
-                <h5 class="mt-0">Cayman Islands</h5>
-                The GDP per capita (PPP adjusted) for the Cayman Islands.
-            </div>
-        </div>
-        <div class="media m-5"">
-            <img src="isle-of-man-gdp-per-capita.png" class="mr-3">
-            <div class="media-body">
-                <h5 class="mt-0">Isle of Man</h5>
-                The GDP per capita for Isle of Man.
-            </div>
-        </div>
 
-       
+            <p>We would like to find things that characterize these economies. For now, we list a few things that we will build
+                upon in the future:
+            </p>
+            <ol>
+                <li>
+                    France and the UK both have very similar graphs. Maybe certain growth rates in the late 20th century strongly correlate
+                    with European success.
+                </li>
+                <li>
+                    China has a very different graph. Notice that it runs in parallel with Macao. Perhaps Asian countries that have high GDP 
+                    per capita are characterized by a recent surge in growth. 
+                </li>
+                <li>
+                    How does this compare to poor countries?
+                </li>
+                <li>
+                    How does China make most of its money vs Great Brittain and France?
+                </li>
+                <li>
+                    Is the United States closely tied to the European markets, the Chinese markets, or both? Or could 
+                    they also have some dependence on countries in the Middle East due to oil (which were not in the top 5, but
+                    many of which are in the top 10).
+                </li>
+            </ol>
 
-        <p>(Note that Isle of Man and Luxembourg are not PPP adjusted)
-            Since these countries clearly don't have data that goes back too far (mid 20th century), we will
-            look at the GDP per capita of China, Great Brittain, and France:
-        </p>
-
-        <div class="media m-5"">
-            <img src="france-gdp-per-capita.png" class="mr-3">
-            <div class="media-body">
-                <h5 class="mt-0">France</h5>
-                The GDP per capita for France.
-            </div>
+            <p>We will explore these ideas and questions in the future. Thanks for reading!</p>
         </div>
-        <div class="media m-5"">
-            <img src="united-kingdom-gdp-per-capita.png" class="mr-3">
-            <div class="media-body">
-                <h5 class="mt-0">United Kingdom</h5>
-                The GDP per capita for the United Kingdom.
-            </div>
-        </div>
-        <div class="media m-5"">
-            <img src="china-gdp-per-capita.png" class="mr-3">
-            <div class="media-body">
-                <h5 class="mt-0">China</h5>
-                The GDP per capita for China.
-            </div>
-        </div>
-
-        <p>We would like to find things that characterize these economies. For now, we list a few things that we will build
-            upon in the future:
-        </p>
-        <ol>
-            <li>
-                France and the UK both have very similar graphs. Maybe certain growth rates in the late 20th century strongly correlate
-                with European success.
-            </li>
-            <li>
-                China has a very different graph. Notice that it runs in parallel with Macao. Perhaps Asian countries that have high GDP 
-                per capita are characterized by a recent surge in growth. 
-            </li>
-            <li>
-                How does this compare to poor countries?
-            </li>
-            <li>
-                How does China make most of its money vs Great Brittain and France?
-            </li>
-            <li>
-                Is the United States closely tied to the European markets, the Chinese markets, or both? Or could 
-                they also have some dependence on countries in the Middle East due to oil (which were not in the top 5, but
-                many of which are in the top 10).
-            </li>
-        </ol>
-
-        <p>We will explore these ideas and questions in the future. Thanks for reading!</p>
+        
     </body>
 </html>

@@ -1,25 +1,19 @@
 $background_color_main: rgb(19, 56, 124);
 $component_background_color: rgb(83, 110, 170);
 
-p {
-    margin-left: 15%;
-    margin-right: 15%;
-}
-  
-
-.classic { 
-    background-color: rgb(253, 253, 253);
-}
-
 %table-shared {
     border: 1px solid rgb(0, 0, 0);
     padding: 10px;
 }
 
-.dataTable {
-    @extend %table-shared;
+#aboutMe {
+    background-color: $component_background_color;
+    margin: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    align-self: center;
+    text-align: center;
 }
 
 #links {
@@ -29,6 +23,16 @@ p {
     margin-bottom: 20px;
 }
 
+.classic { 
+    background-color: rgb(253, 253, 253);
+}
+
+
+.dataTable {
+    @extend %table-shared;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 .pageLink {
     background-color: $component_background_color;
@@ -69,16 +73,6 @@ p {
     text-align: center;
 }
 
-#aboutMe {
-    background-color: $component_background_color;
-    margin: 20px 20px 20px 20px;
-    padding: 20px 20px 20px 20px;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    align-self: center;
-    text-align: center;
-}
-
 .flash-card {
     background-color: $component_background_color;
     color: white;
@@ -99,16 +93,21 @@ p {
     margin-bottom: 20px;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
 .flashCardBack {
     @extend .flash-card;
     overflow: auto;
     margin: 0px;
     padding: 0px;
     height: 150px; 
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.project-list > ol {
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 h2 {
@@ -120,7 +119,8 @@ ol {
     margin-right: 20%;
 }
 
-.project-list > ol {
-    margin-left: 20%;
-    margin-right: 20%;
+p {
+    margin-left: 15%;
+    margin-right: 15%;
 }
+
