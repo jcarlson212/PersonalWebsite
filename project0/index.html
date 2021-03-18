@@ -4,6 +4,84 @@
         <title>My Webpage</title>
         <link rel="stylesheet" type="text/css" href="mystyle.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/506b4cab60.js" crossorigin="anonymous"></script>
+        <script>
+            items = [];
+
+            function createRow() {
+                var row = document.createElement("div");
+                row.className = "content-row";
+                document.getElementsByClassName("content-container")[0].appendChild(row);
+            }
+
+            function createItemHeader(number, title){
+               var itemHeader = document.createElement("div");
+               itemHeader.className = "content-header";
+               
+               var numberLabel = document.createElement("div");
+               numberLabel.className = "number-label";
+               numberLabel.innerHTML = number;
+
+               var titleDiv = document.createElement("div");
+               titleDiv.innerHTML = title;
+
+               var checkDiv = document.createElement("div");
+               var checkSymbol = document.createElement("i");
+               checkSymbol.className = "fas fa-check";
+               checkDiv.appendChild(checkSymbol);
+
+               itemHeader.appendChild(numberLabel);
+               itemHeader.appendChild(titleDiv);
+               itemHeader.appendChild(checkDiv);
+               return itemHeader;
+            }
+
+            function createItemBody(description, image){
+               var itemBody = document.createElement("div");
+               itemBody.className = "content-body";
+               
+               var descriptionDiv = document.createElement("div");
+               descriptionDiv.className = "content-body-item";
+               descriptionDiv.innerHTML = description;
+
+               var imageDiv = document.createElement("div");
+               imageDiv.className = "content-body-item";
+               var theImage = document.createElement("img");
+               theImage.className= "myImage";
+               theImage.src = image;
+               imageDiv.appendChild(theImage);
+
+               itemBody.appendChild(descriptionDiv);
+               itemBody.appendChild(imageDiv);
+               return itemBody;
+            }
+
+            function createItem(number, title, description, image) {
+                if(items.length % 2 === 0){
+                    createRow();
+                }
+                var newItem = document.createElement("div");
+                newItem.className = "content-item-container";
+                newItem.appendChild(createItemHeader(number, title));
+                newItem.appendChild(createItemBody(description, image));
+
+                var rows = document.getElementsByClassName('content-container')[0];
+                var last_row = rows.children[rows.children.length - 1];
+                console.log(last_row);
+                last_row.appendChild(newItem);
+                items.push(newItem);
+
+                return;
+            }
+
+            window.onload = () => {
+                createItem(1, "Algorithm Visualizer", "This projects I made in React.js to show search algorithms like Dijkstra and BFS in a creative way. It also includes sorting algorithms", "pathfinder.png");
+                createItem(2, "Algorithm Visualizer", "This projects I made in React.js to show search algorithms like Dijkstra and BFS in a creative way. It also includes sorting algorithms", "pathfinder.png");
+                createItem(3, "Algorithm Visualizer", "This projects I made in React.js to show search algorithms like Dijkstra and BFS in a creative way. It also includes sorting algorithms", "pathfinder.png");
+                createItem(4, "Algorithm Visualizer", "This projects I made in React.js to show search algorithms like Dijkstra and BFS in a creative way. It also includes sorting algorithms", "pathfinder.png");
+                createItem(5, "Algorithm Visualizer", "This projects I made in React.js to show search algorithms like Dijkstra and BFS in a creative way. It also includes sorting algorithms", "pathfinder.png");
+            }
+        </script>
     </head>
     <body class="classic">
         <header>
@@ -51,142 +129,7 @@
         </div>
 
 
-        <div class="content-container">
-            <div class="content-row">
-                <div class="content-item-container">
-                    <div class="content-header">
-                        <div>
-                            1
-                        </div>
-                        <div>
-                            Algorithm Visualizer
-                        </div>
-                        <div>  
-                            Check
-                        </div>
-                    </div>
-                    <div class="content-body">
-                        <div>
-                            This projects I made in React.js to show search algorithms like Dijkstra and BFS in a creative way. It also includes sorting algorithms
-                        </div>
-                        <div>
-                            <img src="pathfinder.png" width="50%">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="content-item-container">
-                    <div class="content-header">
-                        <div>
-
-                        </div>
-                        <div>
-                            
-                        </div>
-                        <div>
-                            
-                        </div>
-                    </div>
-                    <div class="content-body">
-                        <div>
-                            
-                        </div>
-                        <div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content-row">
-                <div class="content-item-container">
-                    <div class="content-header">
-                        <div>
-
-                        </div>
-                        <div>
-                            
-                        </div>
-                        <div>
-                            
-                        </div>
-                    </div>
-                    <div class="content-body">
-                        <div>
-                            
-                        </div>
-                        <div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="content-item-container">
-                    <div class="content-header">
-                        <div>
-
-                        </div>
-                        <div>
-                            
-                        </div>
-                        <div>
-                            
-                        </div>
-                    </div>
-                    <div class="content-body">
-                        <div>
-                            
-                        </div>
-                        <div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content-row">
-                <div class="content-item-container">
-                    <div class="content-header">
-                        <div>
-
-                        </div>
-                        <div>
-                            
-                        </div>
-                        <div>
-                            
-                        </div>
-                    </div>
-                    <div class="content-body">
-                        <div>
-                            
-                        </div>
-                        <div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="content-item-container">
-                    <div class="content-header">
-                        <div>
-
-                        </div>
-                        <div>
-                            
-                        </div>
-                        <div>
-                            
-                        </div>
-                    </div>
-                    <div class="content-body">
-                        <div>
-                            
-                        </div>
-                        <div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        <div class="content-container"></div>
 
 
         <div class="row">
