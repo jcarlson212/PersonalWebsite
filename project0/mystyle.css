@@ -65,6 +65,7 @@
 .mediaLinks {
   width: 20%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -106,7 +107,119 @@ nav {
   text-align: center;
 }
 
+@keyframes display-timeline-entry {
+  0% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.timeline {
+  background-color: #0d1e3f;
+  margin-left: 10%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  position: relative;
+  width: 80%;
+  height: 1900px;
+  display: block;
+  font-family: 'Droid Sans', sans-serif;
+}
+.timeline:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  width: 4px;
+  background-color: #fff;
+}
+
+.timeline .entries {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  left: -5px;
+}
+
+.timeline .entries .entry.start {
+  animation: display-timeline-entry 4s 1;
+  animation-fill-mode: forwards;  
+}
+.timeline .entries .entry {
+  opacity: 0;
+  width: calc(50% - 80px);
+  float: left;
+  padding: 20px;
+  clear: both;
+  text-align: right;
+}
+.timeline .entries .entry:not(:first-child) {
+  margin-top: -60px;
+}
+.timeline .entries .entry .title {
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+  color: #fff;
+}
+
+.timeline .entries .entry .title:before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 4px solid #fff;
+  background-color: #0d1e3f;
+  border-radius: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -115px;
+  z-index: 1000;
+}
+.timeline .entries .entry .title.big:before {
+  width: 24px;
+  height: 24px;
+  transform: translate(4px, -50%);
+}
+.timeline .entries .entry .body {
+  height: 200px;
+  overflow:auto;
+  color: #aaa;
+}
+.timeline .entries .entry .body p {
+  text-align: right;
+}
+.timeline .entries .entry:nth-child(2n) {
+  text-align: left;
+  float: right;
+}
+.timeline .entries .entry:nth-child(2n) .title:before {
+  left: -100px;
+}
+.timeline .entries .entry:nth-child(2n) .title.big:before {
+  transform: translate(-6px, -50%);
+}
+
+
+
+@keyframes content-move-in {
+  0%{
+    width: 0%;
+    opacity: 0;
+  }
+  100%{
+    width: 100%;
+    opacity: 1;
+  }
+}
+
 .content-container {
+  padding-top: 1em;
+  animation: content-move-in 3s 1;
   background-color:rgb(62, 96, 148);
   display: flex;
   flex-direction: column;
@@ -175,7 +288,9 @@ nav {
 }
 
 .content-body-item{
+  height: 100%;
   width: 49%;
+  overflow: scroll;
 }
 
 .myImage {
